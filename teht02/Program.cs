@@ -12,10 +12,14 @@ namespace teht02 //wahsing machine application
         {
             //create one instance of WashincMachine class
             WashinMachine machine = new WashinMachine();
-            machine.Brand = "ElectroLux";
-            machine.Power = true;
-            machine.Program = "Silk";
-            machine.Temp = 30;
+            machine.Brand = "TeemuDeLux";
+            machine.PrintData();
+            machine.PowerOn();
+            machine.AskProgram();
+            machine.AskTemp();
+            machine.AskSpin();
+            machine.MachineStart();
+            
             machine.PrintData();
         }
     }
