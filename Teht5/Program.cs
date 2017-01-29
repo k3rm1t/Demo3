@@ -18,7 +18,6 @@ namespace Teht5
             student.StudentId = "h1234";
             student.Address = "Kivakatu 6 Tampere";
             student.Presence = true;
-            // student.BigData();
             student.PrintData();
             student[0] = student.Name;
             Console.WriteLine(student[0]);
@@ -33,10 +32,9 @@ namespace Teht5
                 student.Add();
                 for (int j= 0; j < 2; j++)
                 {
-                    student[j++] = student.Name;
+                    student[j] = student.Name;
                 }
             }
-            
             
             for ( int i = 0; i < 5; i++) Console.WriteLine("Info\n" + student[i]);
             
