@@ -48,7 +48,11 @@ namespace Teht5
             }
             set
             {
-                strings[i] = Name +" "+ StudentId+"\n" + Address + "\n" ;
+                for (int j = 0; j < 2; j++)
+                {
+                    strings[i] = Name + " " + StudentId + "\n" + Address + "\n";
+                }
+                
             }
             
         }
