@@ -15,7 +15,12 @@ namespace Teht5
             Student student = new Student();
             student.firstname = "Seppo";
             student.lastname = "Maki";
+            student.StudentId = "h1234";
+            student.Presence = true;
+            // student.BigData();
             student.PrintData();
+            student[0] = student.Name;
+            Console.WriteLine(student[0]);
         }
     }
 }
