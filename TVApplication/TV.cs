@@ -10,7 +10,10 @@ namespace TVApplication
 {
     class TV
     {
+        //field
         // Properties
+        public string Brand { get; set; }
+        public string Model { get; set; }
         public bool Power { get; set; }
         public int Volume { get; set; }
         public int Channel { get; set; }
@@ -24,7 +27,7 @@ namespace TVApplication
         {
             if (Power == true)
             {
-                Console.WriteLine("TV is on.");
+                Console.WriteLine( Brand + " TV is on.\nModel is " + Model);
             }
         }
         public void NextChannel()
@@ -43,26 +46,33 @@ namespace TVApplication
         public void SelectChannel()
         {
             Console.WriteLine("Select channel you want to watch.");
-            Console.WriteLine("ÜLE 1\t1\nÜle 2\t2\nMainio TV\t3");
+            Console.WriteLine("ÜLE 1\t\t1\nÜle 2\t\t2\nMainio TV\t3");
             int i = int.Parse(Console.ReadLine());
             Channel = i;
         }
         public void ShowProgram()
         {
-            if (Channel == 1)
+            if (Channel == 3 || Channel == 2 || Channel == 1) { 
+                switch (Channel)
             {
-                Program = "Üutiset";
+                case 1: Program = "Ütiset";
+                    break;
+                case 2: Program = "Die Kühe(Ratkaisijat)";
+                    break;
+                case 3: Program = "Mainio tv";
+                    break;
+                default: Console.WriteLine("No such channel");
+                    break;
+
+                }
+                Console.WriteLine("Program you are watching is " + Program + " on channel " + Channel +" "+ ChName);
+        
             }
-            else if (Channel == 2)
-            {
-                Program = "Die Kühe(Ratkaisijat)";
-            }
-            else Program = "Ostas TEEVee";
-            Console.WriteLine("Program you are watching is " + Program + " on channel " + Channel +" "+ ChName);
         }
         // Methods to display properties
         public void PrintData()
         {
+            if (Channel == 3 ||Channel == 2 || Channel == 1) { 
             switch (Channel) {
                 case 1: ChName = "ÜLE 1";
                     break;
@@ -73,7 +83,9 @@ namespace TVApplication
                 default:Console.WriteLine("Chinese rise war");
                     break;
             }
-            Console.WriteLine("Channel is " + Channel);
+            Console.WriteLine("");
+            Console.WriteLine("Channel is now " + Channel);
+        }
         }
         // Destructors
     }
