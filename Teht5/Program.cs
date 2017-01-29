@@ -28,7 +28,17 @@ namespace Teht5
             student.StudentId = "o6666";
             student.Address = "ikavakatu 66 Vantaa";
             student[1] = student.Name;
-            for ( int i = 0; i < 2; i++) Console.WriteLine(student[i]);
+            for (int i = 0; i < 2; i++)
+            {
+                student.Add();
+                for (int j= 0; j < 2; j++)
+                {
+                    student[j++] = student.Name;
+                }
+            }
+            
+            
+            for ( int i = 0; i < 5; i++) Console.WriteLine("Info\n" + student[i]);
             
         }
     }
