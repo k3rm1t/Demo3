@@ -27,6 +27,17 @@ namespace Teht5
         // default? constructor
         // constructor
         // methods to change something
+        public void Add()
+        {
+            Console.WriteLine("Add new student. Write first name:");
+            firstname = Console.ReadLine();
+            Console.WriteLine("Last name: ");
+            lastname = Console.ReadLine();
+            Console.WriteLine("Stident Id:");
+            StudentId = Console.ReadLine();
+            Console.WriteLine("Address: ");
+            Address = Console.ReadLine();
+        }
         // method to display something
         
         public string this[int i]
@@ -39,7 +50,7 @@ namespace Teht5
             {
                 strings[i] = Name +" "+ StudentId+"\n" + Address + "\n" ;
             }
-            //Data[0] =  firstname +"\n" + lastname + "\n" + StudentId + "\n" + Address;
+            
         }
         public void PrintData()
         {
@@ -47,7 +58,7 @@ namespace Teht5
             Console.WriteLine("Student Id: " + StudentId);
             Console.WriteLine("Precense: " + Presence);
             
-            //Console.WriteLine("Info: " + Data[0]);
+            
         }
         // destructor
         ~Student()
