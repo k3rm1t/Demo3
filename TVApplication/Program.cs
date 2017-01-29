@@ -13,8 +13,16 @@ namespace TVApplication
             TV tv = new TV();
             tv.Power = true;
             tv.PowerOn();
+            tv.PrintData();
+            tv.Channel = 1;
             tv.NextChannel();
             tv.PrintData();
+            tv.PrevChannel();
+            tv.ShowProgram();
+            tv.PrintData();
+            tv.SelectChannel();
+            tv.PrintData();
+            tv.ShowProgram();
         }
     }
 }
