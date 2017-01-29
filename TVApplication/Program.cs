@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// Teemu Joutulainen
+// TV Application practice
+// 28.01.2017
 namespace TVApplication
 {
     class Program
@@ -11,10 +13,13 @@ namespace TVApplication
         static void Main(string[] args)
         {
             TV tv = new TV();
+            tv.Brand = "TeemDeLux";
+            tv.Model = "LaHo";
             tv.Power = true;
-            tv.PowerOn();
-            tv.PrintData();
             tv.Channel = 1;
+            tv.PowerOn();
+            
+            tv.PrintData();
             tv.NextChannel();
             tv.PrintData();
             tv.PrevChannel();
