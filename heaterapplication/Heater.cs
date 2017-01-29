@@ -14,7 +14,6 @@ namespace Heaterapplication
         public int Humid { get; set; }
         public int Heating { get; set; }
         public string Brand { get; set; }
-
         // constructors
         // methods to change something
         public Heater()

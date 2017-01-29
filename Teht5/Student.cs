@@ -37,7 +37,7 @@ namespace Teht5
             }
             set
             {
-                strings[i] = Name +"\n"+ Address + "\n" + StudentId;
+                strings[i] = Name +" "+ StudentId+"\n" + Address + "\n" ;
             }
             //Data[0] =  firstname +"\n" + lastname + "\n" + StudentId + "\n" + Address;
         }
