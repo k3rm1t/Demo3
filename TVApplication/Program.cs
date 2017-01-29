@@ -17,12 +17,14 @@ namespace TVApplication
             tv.Model = "LaHo";
             tv.Power = true;
             tv.Channel = 1;
+            tv.ChName = "ÜLE 1";
             tv.PowerOn();
-            
+            tv.Brightness = 70;
+            tv.ChangeBrightness();
             tv.PrintData();
             tv.NextChannel();
             tv.PrintData();
-            tv.PrevChannel();
+            //tv.PrevChannel();
             tv.ShowProgram();
             tv.PrintData();
             tv.SelectChannel();
